@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bacoor City Official Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assests/favicon.ico">
+</head>
+<body>
+    <!-- Header (Same for all pages) -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info-top">
+                    <span><i class="fas fa-phone-alt"></i> (046) 434-9801</span>
+                    <span><i class="fas fa-envelope"></i> info@bacoor.gov.ph</span>
+                </div>
+                <div class="social-icons">
+                    <a href="index.html"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.facebook.com/CityGovtBacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/citygovtbacoor/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@citygovtbacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo">
+                            <img src="assests/bacoorlogo.png" alt="Bacoor City Logo">
+                        </div>
+                    <div class="logo-text">
+                        <h1>Bacoor City</h1>
+                        <p>Official Local Government Unit Portal</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="html/about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Bacoor</a></li>
+                        <li><a href="html/services.html" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
+                        <li><a href="html/events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="html/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 id="hero-title">Welcome to Bacoor City!</h2>
+            <p id="hero-description">A progressive city in Cavite committed to serving its citizens with excellence, integrity, and transparency.</p>
+            <a href="html/about.html" class="btn btn-primary">Learn More About Our City</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        &nbsp;
+        <h2 class="section-title">City Services & Announcements</h2>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Citizen Services</h3>
+                    <p>Access various government services including business permits, civil registry, health services, and more through our streamlined processes.</p>
+                    <a href="html/services.html" class="btn btn-small">View Services</a>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Events & Activities</h3>
+                    <p>Stay updated with upcoming city events, festivals, public consultations, and community activities throughout Bacoor.</p>
+                    <a href="html/events.html" class="btn btn-small">View Events</a>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Public Announcements</h3>
+                    <p>Important announcements, advisories, and public service information from the City Government of Bacoor.</p>
+                    <a href="html/events.html" class="btn btn-small">View Announcements</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="announcements-container">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">Latest Announcements</h3>
+            <div id="announcements-list">
+                <!-- Dynamic announcements will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="quick-links">
+            <h3 class="section-title">Quick Access</h3>
+            <div class="quick-links-grid">
+                <a href="html/services.html#business" class="quick-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Business Permits</span>
+                </a>
+                <a href="html/services.html#health" class="quick-link">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health Services</span>
+                </a>
+                <a href="html/contact.html" class="quick-link">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Online Forms</span>
+                </a>
+                <a href="html/events.html" class="quick-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Latest News</span>
+                </a>
+                <a href="html/contact.html#volunteer" class="quick-link">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Volunteer</span>
+                </a>
+                <a href="html/about.html#officials" class="quick-link">
+                    <i class="fas fa-user-tie"></i>
+                    <span>City Officials</span>
+                </a>
+            </div>
+        </div>
+        &nbsp;
+
+    </main>
+
+    <!-- Footer (Same for all pages) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bacoor City</h3>
+                    <p>Official Local Government Unit Portal</p>
+                    <p style="margin-top: 15px;">A progressive city committed to transparent governance and excellent public service.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="html/about.html">About Bacoor</a></li>
+                        <li><a href="html/services.html">Services & Programs</a></li>
+                        <li><a href="html/events.html">Events & Announcements</a></li>
+                        <li><a href="html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bacoor City Hall, Bayanan, Bacoor, Cavite</p>
+                    <p><i class="fas fa-phone-alt"></i> (046) 434-9801</p>
+                    <p><i class="fas fa-envelope"></i> info@bacoor.gov.ph</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> City Government of Bacoor. All Rights Reserved.</p>
+                <p>This is an official website of the Bacoor City Local Government Unit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="announcementModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-date" style="color: var(--secondary); font-weight: 600; margin: 10px 0;"></p>
+            <div id="modal-content"></div>
+            <div style="margin-top: 20px;">
+                <button class="btn" id="closeModalBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load announcements for home page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAnnouncements();
+            setActiveNavLink();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+        
+        function loadAnnouncements() {
+            const announcements = [
+                {
+                    id: 1,
+                    title: "Road Closure Advisory",
+                    content: "Main Street will be closed for road repairs from October 15-20, 2023. Please use alternate routes. Emergency vehicles will still have access. For inquiries, contact the City Engineering Office.",
+                    date: "October 10, 2023",
+                    type: "announcement"
+                },
+                {
+                    id: 2,
+                    title: "Free Medical Check-up",
+                    content: "The City Health Office will conduct free medical check-ups for senior citizens on October 25, 2023 at the City Hall grounds from 8:00 AM to 4:00 PM. Bring your senior citizen ID and medical records.",
+                    date: "October 8, 2023",
+                    type: "announcement"
+                },
+                {
+                    id: 3,
+                    title: "Business Permit Renewal",
+                    content: "Reminder: Business permit renewal for 2024 will start on November 1, 2023. Early renewal (November 1-30) gets 5% discount. Online renewal is available through our e-Services portal.",
+                    date: "October 5, 2023",
+                    type: "announcement"
+                }
+            ];
+            
+            const container = document.getElementById('announcements-list');
+            container.innerHTML = '';
+            
+            announcements.forEach(announcement => {
+                const announcementEl = document.createElement('div');
+                announcementEl.className = 'announcement-item';
+                announcementEl.innerHTML = `
+                    <div>
+                        <h4 style="margin-bottom: 5px;">${announcement.title}</h4>
+                        <p>${announcement.content.substring(0, 100)}...</p>
+                    </div>
+                    <div class="announcement-date">${announcement.date}</div>
+                `;
+                
+                announcementEl.addEventListener('click', () => {
+                    openModal(
+                        announcement.title,
+                        announcement.date,
+                        `<p>${announcement.content}</p>`
+                    );
+                });
+                
+                container.appendChild(announcementEl);
+            });
+        }
+        
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bacoor City Official Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assests/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info-top">
+                    <span><i class="fas fa-phone-alt"></i> (046) 434-9801</span>
+                    <span><i class="fas fa-envelope"></i> info@bacoor.gov.ph</span>
+                </div>
+                <div class="social-icons">
+                    <a href="../index.html"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.facebook.com/CityGovtBacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/citygovtbacoor/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@citygovtbacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="../assests/bacoorlogo.png" alt="Bacoor City Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Bacoor City</h1>
+                        <p>Official Local Government Unit Portal</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Bacoor</a></li>
+                        <li><a href="services.html" class="nav-link active"><i class="fas fa-hands-helping"></i> Services</a></li>
+                        <li><a href="events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>City Services & Programs</h2>
+            <p>Access various government services and programs designed to serve the people of Bacoor.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        &nbsp;
+        <div class="services-search">
+            <input type="text" id="servicesSearch" placeholder="Search for services...">
+            <button class="btn btn-primary" id="searchBtn">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+
+        <!-- Search results will appear here -->
+        <div id="search-results" class="search-results" style="display:none; margin-top:20px;"></div>
+        
+        <div class="services-tabs" id="services-tabs">
+            <button class="tab-btn active" data-tab="business" id="business-tab">
+                <i class="fas fa-briefcase"></i> Business Services
+            </button>
+            <button class="tab-btn" data-tab="health" id="health-tab">
+                <i class="fas fa-heartbeat"></i> Health Services
+            </button>
+            <button class="tab-btn" data-tab="social" id="social-tab">
+                <i class="fas fa-hands-helping"></i> Social Services
+            </button>
+            <button class="tab-btn" data-tab="education" id="education-tab">
+                <i class="fas fa-graduation-cap"></i> Education
+            </button>
+            <button class="tab-btn" data-tab="infra" id="infra-tab">
+                <i class="fas fa-road"></i> Infrastructure
+            </button>
+            
+        </div>
+        
+        <div class="tab-content active" id="business-tab-content">
+            <h3 class="section-title-left">Business & Permitting Services</h3>
+            <div class="service-list" id="business-services">
+                <!-- Business services loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="health-tab-content">
+            <h3 class="section-title-left">Health & Medical Services</h3>
+            <div class="service-list" id="health-services">
+                <!-- Health services loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="social-tab-content">
+            <h3 class="section-title-left">Social Welfare Services</h3>
+            <div class="service-list" id="social-services">
+                <!-- Social services loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="education-tab-content">
+            <h3 class="section-title-left">Education Programs</h3>
+            <div class="service-list" id="education-services">
+                <!-- Education services loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="infra-tab-content">
+            <h3 class="section-title-left">Infrastructure Services</h3>
+            <div class="service-list" id="infra-services">
+                <!-- Infrastructure services loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="online-services">
+            <h3 class="section-title">Online Services Portal</h3>
+            <div class="online-services-grid">
+                <div class="online-service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>E-Services</h4>
+                    <p>Access online government services and submit applications digitally.</p>
+                    <button class="btn btn-small" id="eservicesBtn">Access Portal</button>
+                </div>
+                <div class="online-service-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Appointment System</h4>
+                    <p>Schedule appointments for city services to avoid long queues.</p>
+                    <button class="btn btn-small" id="appointmentBtn">Schedule Now</button>
+                </div>
+                <div class="online-service-card">
+                    <i class="fas fa-download"></i>
+                    <h4>Download Forms</h4>
+                    <p>Download application forms, permits, and other documents.</p>
+                    <button class="btn btn-small" id="downloadFormsBtn">View Forms</button>
+                </div>
+                <div class="online-service-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h4>Service Guide</h4>
+                    <p>Complete guide to all city services, requirements, and procedures.</p>
+                    <button class="btn btn-small" id="serviceGuideBtn">Download Guide</button>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bacoor City</h3>
+                    <p>Official Local Government Unit Portal</p>
+                    <p style="margin-top: 15px;">A progressive city committed to transparent governance and excellent public service.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Bacoor</a></li>
+                        <li><a href="services.html">Services & Programs</a></li>
+                        <li><a href="events.html">Events & Announcements</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bacoor City Hall, Bayanan, Bacoor, Cavite</p>
+                    <p><i class="fas fa-phone-alt"></i> (046) 434-9801</p>
+                    <p><i class="fas fa-envelope"></i> info@bacoor.gov.ph</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> City Government of Bacoor. All Rights Reserved.</p>
+                <p>This is an official website of the Bacoor City Local Government Unit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeServiceModal">&times;</span>
+            <h3 id="service-modal-title"></h3>
+            <div id="service-modal-content"></div>
+            <div id="service-requirements"></div>
+            <div style="margin-top: 20px;">
+                <button class="btn" id="closeServiceModalBtn">Close</button>
+                <button class="btn btn-primary" id="applyOnlineBtn">Apply Online</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/services-tabs.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeServices();
+            setActiveNavLink();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Initialize service tabs
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+                    
+                    // Update active tab button
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Show selected tab content
+                    tabContents.forEach(content => {
+                        if (content.id === `${tabId}-tab-content`) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            document.getElementById('searchBtn').addEventListener('click', searchServices);
+            // run search on Enter
+            document.getElementById('servicesSearch').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    searchServices();
+                }
+            });
+            // run search as the user types (so clearing the input hides results immediately)
+            document.getElementById('servicesSearch').addEventListener('input', function() {
+                searchServices();
+            });
+            
+            // Online services buttons
+            document.getElementById('eservicesBtn').addEventListener('click', function() {
+                alert('E-Services portal would open in a real implementation.');
+            });
+            
+            document.getElementById('appointmentBtn').addEventListener('click', function() {
+                alert('Appointment system would open in a real implementation.');
+            });
+            
+            document.getElementById('downloadFormsBtn').addEventListener('click', function() {
+                alert('Forms download page would open in a real implementation.');
+            });
+            
+            document.getElementById('serviceGuideBtn').addEventListener('click', function() {
+                alert('Service guide PDF would download in a real implementation.');
+            });
+        });
+        
+        // master list used by search
+        let allServices = [];
+
+        function initializeServices() {
+            allServices = [];
+            loadBusinessServices();
+            loadHealthServices();
+            loadSocialServices();
+            loadEducationServices();
+            loadInfrastructureServices();
+            // ensure all services are rendered so they're available when tabs are switched
+            renderAllTabsContent();
+        }
+
+        function renderAllTabsContent() {
+            // render business
+            const businessServices = allServices.filter(s => s.category === 'Business');
+            renderServices(businessServices, document.getElementById('business-services'));
+            
+            // render health
+            const healthServices = allServices.filter(s => s.category === 'Health');
+            renderServices(healthServices, document.getElementById('health-services'));
+            
+            // render social
+            const socialServices = allServices.filter(s => s.category === 'Social');
+            renderServices(socialServices, document.getElementById('social-services'));
+            
+            // render education
+            const educationServices = allServices.filter(s => s.category === 'Education');
+            renderServices(educationServices, document.getElementById('education-services'));
+            
+            // render infrastructure
+            const infraServices = allServices.filter(s => s.category === 'Infrastructure');
+            renderServices(infraServices, document.getElementById('infra-services'));
+        }
+        
+        function loadBusinessServices() {
+            const services = [
+                { 
+                    id: 1, 
+                    name: "Business Permit Application", 
+                    description: "Process and requirements for new business registration and renewal of permits.",
+                    requirements: ["Barangay Clearance", "Proof of Business Address", "DTI/SEC Registration", "Mayor's Permit from Previous Year (for renewal)"],
+                    processingTime: "3-5 working days",
+                    fee: "Based on business capitalization"
+                },
+                { 
+                    id: 2, 
+                    name: "Mayor's Clearance", 
+                    description: "Application for Mayor's Clearance for various purposes including employment and travel.",
+                    requirements: ["Valid ID", "Barangay Clearance", "Purpose Letter"],
+                    processingTime: "1-2 working days",
+                    fee: "PHP 100.00"
+                },
+                { 
+                    id: 3, 
+                    name: "Market Stall Rental", 
+                    description: "Information on public market stall availability and rental procedures.",
+                    requirements: ["Valid ID", "Business Plan", "Clearance from Market Administrator"],
+                    processingTime: "5-7 working days",
+                    fee: "Based on stall size and location"
+                }
+            ];
+            
+            services.forEach(s => s.category = 'Business');
+            allServices = allServices.concat(services);
+        }
+        
+        function loadHealthServices() {
+            const services = [
+                { 
+                    id: 4, 
+                    name: "Medical Consultations", 
+                    description: "Free medical consultations at City Health Office and Barangay Health Centers.",
+                    requirements: ["Valid ID", "Health Card (if available)"],
+                    processingTime: "Same day",
+                    fee: "Free"
+                },
+                { 
+                    id: 5, 
+                    name: "Immunization Services", 
+                    description: "Vaccination programs for children, adults, and senior citizens.",
+                    requirements: ["Vaccination Card", "Valid ID"],
+                    processingTime: "Same day",
+                    fee: "Free"
+                }
+            ];
+            
+            services.forEach(s => s.category = 'Health');
+            allServices = allServices.concat(services);
+        }
+        
+        function renderServices(services, container) {
+            container.innerHTML = '';
+            
+            services.forEach(service => {
+                const serviceEl = document.createElement('div');
+                serviceEl.className = 'service-item';
+                // assign an id so search can jump to this element
+                serviceEl.id = `service-${service.id}`;
+                if (service.category) serviceEl.dataset.category = service.category;
+                serviceEl.innerHTML = `
+                    <h4>${service.name}</h4>
+                    <p>${service.description}</p>
+                    <div class="service-details">
+                        <p><strong>Processing Time:</strong> ${service.processingTime}</p>
+                        <p><strong>Fee:</strong> ${service.fee}</p>
+                    </div>
+                    <button class="btn btn-small view-details-btn" data-service-id="${service.id}">View Details & Requirements</button>
+                `;
+                
+                // Add event listener for view details
+                serviceEl.querySelector('.view-details-btn').addEventListener('click', function() {
+                    showServiceDetails(service);
+                });
+                
+                container.appendChild(serviceEl);
+            });
+        }
+
+        // Jump to a rendered service on the page and activate its tab
+        function goToService(service) {
+            // map category to tab id
+            const categoryToTab = {
+                'Business': 'business',
+                'Health': 'health',
+                'Social': 'social',
+                'Education': 'education',
+                'Infrastructure': 'infra'
+            };
+            
+            const tabId = categoryToTab[service.category];
+            if (!tabId) return false;
+            
+            // activate the correct tab
+            const tabBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+            if (tabBtn) tabBtn.click();
+            
+            // wait for tab to be visible, then find and scroll to the service
+            setTimeout(() => {
+                const el = document.getElementById(`service-${service.id}`);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // briefly highlight
+                    el.classList.add('highlight');
+                    setTimeout(() => el.classList.remove('highlight'), 2200);
+                    
+                    // attach event listener to view details button
+                    const viewDetailsBtn = el.querySelector('.view-details-btn');
+                    if (viewDetailsBtn) {
+                        viewDetailsBtn.removeEventListener('click', null); // clear old listeners
+                        viewDetailsBtn.addEventListener('click', function() {
+                            showServiceDetails(service);
+                        });
+                    }
+                }
+                
+                // clear search input and hide results, then restore tab visibility
+                document.getElementById('servicesSearch').value = '';
+                document.getElementById('search-results').style.display = 'none';
+                
+                // restore the active tab visibility
+                const tabContents = document.querySelectorAll('.tab-content');
+                tabContents.forEach(tc => {
+                    tc.style.display = tc.classList.contains('active') ? 'block' : 'none';
+                });
+            }, 250);
+            
+            return true;
+        }
+
+        // Social services
+        function loadSocialServices() {
+            const services = [
+                {
+                    id: 6,
+                    name: 'Social Assistance Program',
+                    description: 'Support for indigent families and individuals including cash assistance and livelihood programs.',
+                    requirements: ['Valid ID', 'Barangay Certification'],
+                    processingTime: '7-10 working days',
+                    fee: 'Free'
+                },
+                {
+                    id: 7,
+                    name: 'Senior Citizen Support',
+                    description: 'Programs for senior citizens including discounts, medical support, and social services.',
+                    requirements: ['Senior Citizen ID'],
+                    processingTime: 'Same day',
+                    fee: 'Free'
+                }
+            ];
+            services.forEach(s => s.category = 'Social');
+            allServices = allServices.concat(services);
+        }
+
+        // Education services
+        function loadEducationServices() {
+            const services = [
+                {
+                    id: 8,
+                    name: 'Scholarship Programs',
+                    description: 'Scholarships and educational assistance for deserving students.',
+                    requirements: ['School Certification', 'Income Documents'],
+                    processingTime: 'Varies',
+                    fee: 'Free'
+                },
+                {
+                    id: 9,
+                    name: 'Adult Education',
+                    description: 'Literacy and skills training programs for adults.',
+                    requirements: ['Valid ID'],
+                    processingTime: 'Ongoing',
+                    fee: 'Free'
+                }
+            ];
+            services.forEach(s => s.category = 'Education');
+            allServices = allServices.concat(services);
+        }
+
+        // Infrastructure services
+        function loadInfrastructureServices() {
+            const services = [
+                {
+                    id: 10,
+                    name: 'Road Repair Requests',
+                    description: 'Report damaged roads and request repairs by the City Engineering Office.',
+                    requirements: ['Location Details', 'Contact Number'],
+                    processingTime: 'Depends on scope',
+                    fee: 'Based on project'
+                },
+                {
+                    id: 11,
+                    name: 'Building Permits',
+                    description: 'Application for building permits and inspections.',
+                    requirements: ['Building Plans', 'Owner ID', 'Barangay Clearance'],
+                    processingTime: '15-30 working days',
+                    fee: 'Based on project'
+                }
+            ];
+            services.forEach(s => s.category = 'Infrastructure');
+            allServices = allServices.concat(services);
+        }
+
+        // Render search results
+        function renderSearchResults(results, term) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+            if (!results || results.length === 0) {
+                resultsContainer.innerHTML = `<div class="service-list"><p>No results found for "${term}".</p></div>`;
+                resultsContainer.style.display = 'block';
+                return;
+            }
+
+            const list = document.createElement('div');
+            list.className = 'service-list';
+
+            results.forEach(service => {
+                const item = document.createElement('div');
+                item.className = 'service-item';
+                item.id = `service-${service.id}`;
+                item.innerHTML = `
+                    <h4>${service.name} <small style="color:var(--gray); font-weight:600;">&nbsp;(${service.category})</small></h4>
+                    <p>${service.description}</p>
+                    <div class="service-details">
+                        <p><strong>Processing Time:</strong> ${service.processingTime}</p>
+                        <p><strong>Fee:</strong> ${service.fee}</p>
+                    </div>
+                    <div style="display:flex;gap:8px;justify-content:center;margin-top:8px;">
+                        <button class="btn btn-small view-details-btn" data-service-id="${service.id}">View Details</button>
+                        <button class="btn btn-small" data-go-id="${service.id}">Go To Service</button>
+                    </div>
+                `;
+
+                // Attach event listener for "View Details" button
+                item.querySelector('.view-details-btn').addEventListener('click', function() {
+                    showServiceDetails(service);
+                });
+
+                // Go to location handler: activate tab and scroll to rendered service
+                item.querySelector('[data-go-id]').addEventListener('click', function() {
+                    const ok = goToService(service);
+                    if (!ok) {
+                        // if not found, open details as fallback
+                        showServiceDetails(service);
+                    }
+                });
+
+                list.appendChild(item);
+            });
+
+            resultsContainer.appendChild(list);
+            resultsContainer.style.display = 'block';
+        }
+        
+        function showServiceDetails(service) {
+            document.getElementById('service-modal-title').textContent = service.name;
+            
+            let requirementsHtml = '';
+            if (service.requirements && service.requirements.length > 0) {
+                requirementsHtml = `<h4>Requirements:</h4><ul>`;
+                service.requirements.forEach(req => {
+                    requirementsHtml += `<li>${req}</li>`;
+                });
+                requirementsHtml += `</ul>`;
+            }
+            
+            document.getElementById('service-modal-content').innerHTML = `
+                <p>${service.description}</p>
+                <div class="service-info">
+                    <p><strong>Processing Time:</strong> ${service.processingTime}</p>
+                    <p><strong>Fee:</strong> ${service.fee}</p>
+                </div>
+            `;
+            
+            document.getElementById('service-requirements').innerHTML = requirementsHtml;
+            
+            // Show modal
+            document.getElementById('serviceModal').style.display = 'flex';
+            
+            // Clone and replace close button to remove old listeners
+            const closeBtn = document.getElementById('closeServiceModal');
+            const newCloseBtn = closeBtn.cloneNode(true);
+            closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+            newCloseBtn.addEventListener('click', function() {
+                document.getElementById('serviceModal').style.display = 'none';
+            });
+            
+            // Clone and replace close modal button
+            const closeBtnModal = document.getElementById('closeServiceModalBtn');
+            const newCloseBtnModal = closeBtnModal.cloneNode(true);
+            closeBtnModal.parentNode.replaceChild(newCloseBtnModal, closeBtnModal);
+            newCloseBtnModal.addEventListener('click', function() {
+                document.getElementById('serviceModal').style.display = 'none';
+            });
+            
+            // Clone and replace apply online button
+            const applyBtn = document.getElementById('applyOnlineBtn');
+            const newApplyBtn = applyBtn.cloneNode(true);
+            applyBtn.parentNode.replaceChild(newApplyBtn, applyBtn);
+            newApplyBtn.addEventListener('click', function() {
+                alert(`Application for ${service.name} would be processed online.`);
+                document.getElementById('serviceModal').style.display = 'none';
+            });
+        }
+        
+        function searchServices() {
+            const term = document.getElementById('servicesSearch').value.trim().toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            if (!term) {
+                // hide results and show only the active tab if search is empty
+                resultsContainer.style.display = 'none';
+                tabContents.forEach(tc => {
+                    tc.style.display = tc.classList.contains('active') ? 'block' : 'none';
+                });
+                return;
+            }
+
+            // hide all tabs when searching
+            tabContents.forEach(tc => tc.style.display = 'none');
+
+            // filter across name, description and requirements
+            const results = allServices.filter(s => {
+                if (!s) return false;
+                const inName = s.name && s.name.toLowerCase().includes(term);
+                const inDesc = s.description && s.description.toLowerCase().includes(term);
+                const inReq = s.requirements && s.requirements.some(r => r.toLowerCase().includes(term));
+                return inName || inDesc || inReq;
+            });
+
+            renderSearchResults(results, term);
+        }
+        
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

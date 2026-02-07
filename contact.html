@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Inquiry - Bacoor City Official Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assests/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info-top">
+                    <span><i class="fas fa-phone-alt"></i> (046) 434-9801</span>
+                    <span><i class="fas fa-envelope"></i> info@bacoor.gov.ph</span>
+                </div>
+                <div class="social-icons">
+                    <a href="../index.html"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.facebook.com/CityGovtBacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/citygovtbacoor/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@citygovtbacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="../assests/bacoorlogo.png" alt="Bacoor City Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Bacoor City</h1>
+                        <p>Official Local Government Unit Portal</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Bacoor</a></li>
+                        <li><a href="services.html" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
+                        <li><a href="events.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Contact & Inquiry</h2>
+            <p>Get in touch with the City Government of Bacoor for inquiries, concerns, and feedback.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        &nbsp;
+        <div class="contact-container">
+            <div class="contact-form-container">
+                <h3 class="section-title-left">Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="error" id="nameError">Please enter your full name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="error" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="service">Service Request</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="volunteer">Volunteer Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error" id="subjectError">Please select a subject</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Department (Optional)</label>
+                        <select id="department" class="form-control">
+                            <option value="">Select a department</option>
+                            <option value="mayor">Mayor's Office</option>
+                            <option value="health">Health Department</option>
+                            <option value="engineering">Engineering Office</option>
+                            <option value="treasurer">Treasurer's Office</option>
+                            <option value="social">Social Welfare</option>
+                            <option value="planning">Planning Office</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                        <div class="error" id="messageError">Please enter your message</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">Subscribe to our newsletter for updates</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+                    </div>
+                    
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> Your message has been sent successfully! We will respond within 3 business days.
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h3 class="section-title-left">Contact Information</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Bacoor City Hall, Bayanan, Bacoor City, Cavite, Philippines 4102</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Phone Numbers</h4>
+                        <p>Mayor's Office: (046) 434-9801</p>
+                        <p>General Services: (046) 434-9802</p>
+                        <p>Emergency Hotline: 911</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email Addresses</h4>
+                        <p>Mayor's Office: mayor@bacoor.gov.ph</p>
+                        <p>Public Information: info@bacoor.gov.ph</p>
+                        <p>Complaints: complaints@bacoor.gov.ph</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4>Office Hours</h4>
+                        <p>Monday to Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 8:00 AM - 12:00 PM</p>
+                        <p>Closed on Sundays and Holidays</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-contacts">
+                    <h4>Emergency Contacts</h4>
+                    <div class="emergency-grid">
+                        <div class="emergency-item">
+                            <i class="fas fa-ambulance"></i>
+                            <p>Ambulance: 161</p>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-fire"></i>
+                            <p>Fire Department: 160</p>
+                        </div>
+                        <div class="emergency-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Police: 117</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="volunteer" class="volunteer-section">
+            <h3 class="section-title">Volunteer & Membership Programs</h3>
+            
+            <div class="volunteer-options">
+                <div class="volunteer-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>City Volunteer Program</h4>
+                    <p>Join our team of dedicated volunteers who help in various city programs and events.</p>
+                    <button class="btn btn-small" id="volunteerBtn">Become a Volunteer</button>
+                </div>
+                
+                <div class="volunteer-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Community Programs</h4>
+                    <p>Participate in various community programs and membership opportunities.</p>
+                    <button class="btn btn-small" id="membershipBtn">Join Programs</button>
+                </div>
+                
+                <div class="volunteer-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Donations & Support</h4>
+                    <p>Support city projects and programs through donations or sponsorship.</p>
+                    <button class="btn btn-small" id="donationBtn">Make a Donation</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <h3 class="section-title">Frequently Asked Questions</h3>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        How can I get a business permit?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Business permits can be obtained from the City Treasurer's Office. You need to submit required documents including Barangay Clearance, DTI/SEC Registration, and proof of business address. The process typically takes 3-5 working days.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        Where can I get a birth certificate?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Birth certificates can be obtained from the City Civil Registry Office located at the City Hall. You need to present valid ID and pay the required fee. For births registered in Bacoor, processing is same day.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-btn">
+                        How can I report a problem in my barangay?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>You can report barangay concerns through your barangay hall, or use the contact form on this website selecting "Complaint" as the subject. For urgent matters, contact the City Mayor's Office hotline at (046) 434-9801.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bacoor City</h3>
+                    <p>Official Local Government Unit Portal</p>
+                    <p style="margin-top: 15px;">A progressive city committed to transparent governance and excellent public service.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Bacoor</a></li>
+                        <li><a href="services.html">Services & Programs</a></li>
+                        <li><a href="events.html">Events & Announcements</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bacoor City Hall, Bayanan, Bacoor, Cavite</p>
+                    <p><i class="fas fa-phone-alt"></i> (046) 434-9801</p>
+                    <p><i class="fas fa-envelope"></i> info@bacoor.gov.ph</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> City Government of Bacoor. All Rights Reserved.</p>
+                <p>This is an official website of the Bacoor City Local Government Unit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="volunteerModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeVolunteerModal">&times;</span>
+            <h3 id="volunteer-modal-title"></h3>
+            <div id="volunteer-modal-content"></div>
+            <div style="margin-top: 20px;">
+                <button class="btn" id="closeVolunteerModalBtn">Close</button>
+                <button class="btn btn-primary" id="applyVolunteerBtn">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setActiveNavLink();
+            setupAccordion();
+            loadSavedFormData();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', handleFormSubmit);
+            
+            // Volunteer buttons
+            document.getElementById('volunteerBtn').addEventListener('click', function() {
+                showVolunteerModal(
+                    'City Volunteer Program',
+                    `<p>The City Volunteer Program offers opportunities for citizens to contribute to community development through various initiatives:</p>
+                    <ul>
+                        <li><strong>Disaster Response Volunteers</strong> - Assist during calamities and emergencies</li>
+                        <li><strong>Environmental Volunteers</strong> - Participate in clean-up drives and tree planting</li>
+                        <li><strong>Event Volunteers</strong> - Help organize city festivals and public events</li>
+                        <li><strong>Senior Citizen Assistants</strong> - Provide support to elderly citizens</li>
+                        <li><strong>Youth Volunteers</strong> - Leadership and community service opportunities for students</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Must be at least 18 years old (16 with parental consent)</li>
+                        <li>Good moral character</li>
+                        <li>Willing to undergo orientation/training</li>
+                        <li>Can commit at least 4 hours per month</li>
+                    </ul>`
+                );
+            });
+            
+            document.getElementById('membershipBtn').addEventListener('click', function() {
+                showVolunteerModal(
+                    'Community Programs Membership',
+                    `<p>The City Government of Bacoor offers several community programs for residents:</p>
+                    <ul>
+                        <li><strong>Bacoor Community Health Program</strong> - Free health check-ups and medical services</li>
+                        <li><strong>Livelihood Training Program</strong> - Skills development for entrepreneurs</li>
+                        <li><strong>Youth Development Council</strong> - Leadership programs for young residents</li>
+                        <li><strong>Senior Citizens Association</strong> - Activities and benefits for elderly residents</li>
+                        <li><strong>PWD Federation</strong> - Support and advocacy for persons with disabilities</li>
+                        <li><strong>Urban Gardening Club</strong> - Community gardening and sustainability initiatives</li>
+                    </ul>
+                    <p>Membership is free for Bacoor residents. Each program has regular meetings, workshops, and community activities.</p>`
+                );
+            });
+            
+            document.getElementById('donationBtn').addEventListener('click', function() {
+                showVolunteerModal(
+                    'Donations & Support',
+                    `<p>Support the City Government of Bacoor in serving our community better. Your donations help fund various projects and programs:</p>
+                    <ul>
+                        <li><strong>Education Support</strong> - Scholarships, school supplies for underprivileged students</li>
+                        <li><strong>Health Programs</strong> - Medical equipment, medicine for community health centers</li>
+                        <li><strong>Disaster Response</strong> - Emergency supplies and equipment</li>
+                        <li><strong>Environmental Projects</strong> - Tree planting, clean-up drives</li>
+                        <li><strong>Senior Citizen Programs</strong> - Meals, activities for elderly residents</li>
+                    </ul>
+                    <p><strong>Donation Methods:</strong></p>
+                    <ul>
+                        <li>Cash or check donation at City Treasurer's Office</li>
+                        <li>Bank transfer to official city accounts</li>
+                        <li>In-kind donations (contact us for accepted items)</li>
+                    </ul>
+                    <p>All donations are tax-deductible and will be acknowledged with official receipt.</p>`
+                );
+            });
+        });
+        
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Reset errors
+            document.querySelectorAll('.error').forEach(error => {
+                error.style.display = 'none';
+            });
+            document.querySelectorAll('.form-control').forEach(input => {
+                input.classList.remove('error-input');
+            });
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            const newsletter = document.getElementById('newsletter').checked;
+            
+            // Validate form
+            let isValid = true;
+            
+            if (!name) {
+                document.getElementById('nameError').style.display = 'block';
+                document.getElementById('name').classList.add('error-input');
+                isValid = false;
+            }
+            
+            if (!email || !isValidEmail(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                document.getElementById('email').classList.add('error-input');
+                isValid = false;
+            }
+            
+            if (!subject) {
+                document.getElementById('subjectError').style.display = 'block';
+                document.getElementById('subject').classList.add('error-input');
+                isValid = false;
+            }
+            
+            if (!message) {
+                document.getElementById('messageError').style.display = 'block';
+                document.getElementById('message').classList.add('error-input');
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                return;
+            }
+            
+            // Get additional form values
+            const phone = document.getElementById('phone').value.trim();
+            const department = document.getElementById('department').value;
+            
+            // Create inquiry object
+            const inquiry = {
+                name,
+                email,
+                phone,
+                subject,
+                department,
+                message,
+                newsletter,
+                timestamp: new Date().toISOString(),
+                status: 'pending'
+            };
+            
+            // Save inquiry to localStorage
+            saveInquiry(inquiry);
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Clear saved form data
+            localStorage.removeItem('bacoorContactFormDraft');
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        }
+        
+        function saveInquiry(inquiry) {
+            // Get existing inquiries or create empty array
+            const inquiries = JSON.parse(localStorage.getItem('bacoorInquiries') || '[]');
+            
+            // Add new inquiry
+            inquiries.push(inquiry);
+            
+            // Save back to localStorage
+            localStorage.setItem('bacoorInquiries', JSON.stringify(inquiries));
+            
+            // If user subscribed to newsletter, save to subscriptions
+            if (inquiry.newsletter) {
+                const subscriptions = JSON.parse(localStorage.getItem('bacoorSubscriptions') || '[]');
+                if (!subscriptions.some(sub => sub.email === inquiry.email)) {
+                    subscriptions.push({ 
+                        email: inquiry.email, 
+                        name: inquiry.name,
+                        date: new Date().toISOString() 
+                    });
+                    localStorage.setItem('bacoorSubscriptions', JSON.stringify(subscriptions));
+                }
+            }
+        }
+        
+        function loadSavedFormData() {
+            const savedData = localStorage.getItem('bacoorContactFormDraft');
+            
+            if (savedData) {
+                const formData = JSON.parse(savedData);
+                document.getElementById('name').value = formData.name || '';
+                document.getElementById('email').value = formData.email || '';
+                document.getElementById('phone').value = formData.phone || '';
+                document.getElementById('subject').value = formData.subject || '';
+                document.getElementById('department').value = formData.department || '';
+                document.getElementById('message').value = formData.message || '';
+                
+                // Show notification
+                showDraftNotification();
+            }
+            
+            // Auto-save form data on input
+            const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('input', autoSaveForm);
+            });
+        }
+        
+        function autoSaveForm() {
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                department: document.getElementById('department').value,
+                message: document.getElementById('message').value
+            };
+            
+            localStorage.setItem('bacoorContactFormDraft', JSON.stringify(formData));
+        }
+        
+        function showDraftNotification() {
+            const notification = document.createElement('div');
+            notification.className = 'draft-notification';
+            notification.innerHTML = `
+                <p><i class="fas fa-save"></i> Draft restored from previous session</p>
+                <button class="btn btn-small" id="clearDraftBtn">Clear Draft</button>
+            `;
+            
+            document.querySelector('.contact-form-container').prepend(notification);
+            
+            document.getElementById('clearDraftBtn').addEventListener('click', function() {
+                localStorage.removeItem('bacoorContactFormDraft');
+                document.getElementById('contactForm').reset();
+                notification.remove();
+            });
+            
+            // Auto-remove after 10 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 10000);
+        }
+        
+        function showVolunteerModal(title, content) {
+            document.getElementById('volunteer-modal-title').textContent = title;
+            document.getElementById('volunteer-modal-content').innerHTML = content;
+            
+            // Show modal
+            document.getElementById('volunteerModal').style.display = 'flex';
+            
+            // Set up modal close buttons
+            document.getElementById('closeVolunteerModal').addEventListener('click', function() {
+                document.getElementById('volunteerModal').style.display = 'none';
+            });
+            
+            document.getElementById('closeVolunteerModalBtn').addEventListener('click', function() {
+                document.getElementById('volunteerModal').style.display = 'none';
+            });
+            
+            document.getElementById('applyVolunteerBtn').addEventListener('click', function() {
+                alert(`Application for "${title}" would open in a real implementation.`);
+                document.getElementById('volunteerModal').style.display = 'none';
+            });
+        }
+        
+        function setupAccordion() {
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+            
+            accordionBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        }
+        
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Announcements - Bacoor City Official Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assests/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info-top">
+                    <span><i class="fas fa-phone-alt"></i> (046) 434-9801</span>
+                    <span><i class="fas fa-envelope"></i> info@bacoor.gov.ph</span>
+                </div>
+                <div class="social-icons">
+                    <a href="../index.html"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.facebook.com/CityGovtBacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/citygovtbacoor/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@citygovtbacoor" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="../assests/bacoorlogo.png" alt="Bacoor City Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Bacoor City</h1>
+                        <p>Official Local Government Unit Portal</p>
+                    </div>
+                </div>
+                
+                <nav>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About Bacoor</a></li>
+                        <li><a href="services.html" class="nav-link"><i class="fas fa-hands-helping"></i> Services</a></li>
+                        <li><a href="events.html" class="nav-link active"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Events & Announcements</h2>
+            <p>Stay updated with the latest city events, announcements, and public advisories.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        &nbsp;
+        <div class="events-controls">
+            <div class="search-box">
+                <input type="text" id="eventSearch" placeholder="Search events and announcements...">
+                <button class="btn btn-small" id="searchEventsBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="past">Past Events</button>
+                <button class="filter-btn" data-filter="announcement">Announcements</button>
+                <button class="filter-btn" data-filter="holiday">Holidays</button>
+            </div>
+        </div>
+        
+        <div class="events-grid" id="events-container">
+            <!-- Dynamic events will be loaded here -->
+        </div>
+        
+        <div class="events-pagination">
+            <button class="btn" id="prevEventsBtn" disabled>Previous</button>
+            <span id="pageInfo">Page 1 of 2</span>
+            <button class="btn" id="nextEventsBtn">Next</button>
+        </div>
+        
+        <div class="calendar-section">
+            <h3 class="section-title">Events Calendar</h3>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonthBtn"><i class="fas fa-chevron-left"></i></button>
+                    <h4 id="currentMonthYear">October 2023</h4>
+                    <button id="nextMonthBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid" id="calendar">
+                    <!-- Calendar will be generated here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="announcement-subscription">
+            <h3 class="section-title">Stay Informed</h3>
+            <p>Subscribe to receive important announcements and event notifications via email.</p>
+            <div class="subscription-form">
+                <input type="email" id="subscribeEmail" placeholder="Enter your email address">
+                <button class="btn btn-primary" id="subscribeBtn">Subscribe</button>
+            </div>
+            <p class="subscription-note"><i class="fas fa-info-circle"></i> You can unsubscribe at any time. We respect your privacy.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Bacoor City</h3>
+                    <p>Official Local Government Unit Portal</p>
+                    <p style="margin-top: 15px;">A progressive city committed to transparent governance and excellent public service.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Bacoor</a></li>
+                        <li><a href="services.html">Services & Programs</a></li>
+                        <li><a href="events.html">Events & Announcements</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Bacoor City Hall, Bayanan, Bacoor, Cavite</p>
+                    <p><i class="fas fa-phone-alt"></i> (046) 434-9801</p>
+                    <p><i class="fas fa-envelope"></i> info@bacoor.gov.ph</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> City Government of Bacoor. All Rights Reserved.</p>
+                <p>This is an official website of the Bacoor City Local Government Unit.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeEventModal">&times;</span>
+            <h3 id="event-modal-title"></h3>
+            <p id="event-modal-date" style="color: var(--secondary); font-weight: 600; margin: 10px 0;"></p>
+            <div id="event-modal-content"></div>
+            <div id="event-details"></div>
+            <div style="margin-top: 20px;">
+                <button class="btn" id="closeEventModalBtn">Close</button>
+                <button class="btn btn-primary" id="registerEventBtn">Register for Event</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/events-filter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadEvents();
+            initializeCalendar();
+            setActiveNavLink();
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Event search
+            document.getElementById('searchEventsBtn').addEventListener('click', searchEvents);
+            document.getElementById('eventSearch').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    searchEvents();
+                }
+            });
+            
+            // Subscription
+            document.getElementById('subscribeBtn').addEventListener('click', function() {
+                const email = document.getElementById('subscribeEmail').value;
+                if (email && isValidEmail(email)) {
+                    alert(`Thank you for subscribing with ${email}! You will receive notifications about upcoming events and announcements.`);
+                    document.getElementById('subscribeEmail').value = '';
+                    
+                    // Save subscription to localStorage
+                    const subscriptions = JSON.parse(localStorage.getItem('bacoorSubscriptions') || '[]');
+                    subscriptions.push({ email, date: new Date().toISOString() });
+                    localStorage.setItem('bacoorSubscriptions', JSON.stringify(subscriptions));
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        });
+        
+        function loadEvents() {
+            const today = new Date();
+            const events = [
+                {
+                    id: 1,
+                    title: "Bacoor City Festival",
+                    description: "Annual city festival celebrating Bacoor's culture and heritage with parades, food fairs, and cultural performances.",
+                    fullDescription: "Join us for the annual Bacoor City Festival featuring cultural presentations, food fair showcasing local delicacies, street dancing competition, and fireworks display. The festival celebrates our city's founding anniversary and rich cultural heritage.",
+                    date: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7),
+                    image: "festival.jpg",
+                    type: "event",
+                    category: "upcoming",
+                    location: "Bacoor City Hall Grounds",
+                    time: "8:00 AM - 10:00 PM",
+                    registrationRequired: true
+                },
+                {
+                    id: 2,
+                    title: "Public Consultation on City Budget",
+                    description: "Open forum for citizens to provide input on the proposed 2024 city budget.",
+                    fullDescription: "The City Government invites all residents to participate in the public consultation for the proposed 2024 Annual Budget. Share your insights and help prioritize projects and programs for our city.",
+                    date: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 3),
+                    image: "consultation.jpg",
+                    type: "event",
+                    category: "upcoming",
+                    location: "City Council Session Hall",
+                    time: "2:00 PM - 5:00 PM",
+                    registrationRequired: false
+                },
+                {
+                    id: 3,
+                    title: "Clean-up Drive",
+                    description: "Community clean-up drive along Bacoor Bay. Volunteers are welcome to join.",
+                    fullDescription: "Help keep our city clean! Join the monthly community clean-up drive along Bacoor Bay. Gloves and garbage bags will be provided. All volunteers will receive a certificate of participation.",
+                    date: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 10),
+                    image: "cleanup.jpg",
+                    type: "event",
+                    category: "upcoming",
+                    location: "Bacoor Baywalk",
+                    time: "6:00 AM - 9:00 AM",
+                    registrationRequired: true
+                },
+                {
+                    id: 4,
+                    title: "Road Closure Advisory",
+                    description: "Main Street will be closed for road repairs from October 15-20, 2023.",
+                    fullDescription: "Please be advised that Main Street will be closed for road repairs and drainage improvement from October 15-20, 2023. Alternate routes are available via Secondary Road and Coastal Road. Emergency vehicles will have access at all times.",
+                    date: new Date(today.getFullYear(), today.getMonth(), 10),
+                    image: "roadclosure.jpg",
+                    type: "announcement",
+                    category: "announcement"
+                },
+                {
+                    id: 5,
+                    title: "All Saints' Day",
+                    description: "City government offices will be closed in observance of All Saints' Day.",
+                    fullDescription: "In observance of All Saints' Day, all city government offices will be closed on November 1, 2023. Regular operations will resume on November 2, 2023.",
+                    date: new Date(today.getFullYear(), 10, 1), // November 1
+                    image: "allsaints.jpg",
+                    type: "holiday",
+                    category: "holiday"
+                }
+                ,
+                {
+                    id: 6,
+                    title: "Christmas Day (Non-Working Holiday)",
+                    description: "City government offices will be closed in observance of Christmas Day.",
+                    fullDescription: "All city government offices will be closed on December 25 in observance of Christmas Day. Please plan accordingly for public services and schedules.",
+                    date: new Date(today.getFullYear(), 11, 25), // December 25
+                    image: "christmas.jpg",
+                    type: "holiday",
+                    category: "holiday"
+                },
+                {
+                    id: 7,
+                    title: "New Year's Day (Non-Working Holiday)",
+                    description: "City government offices will be closed in observance of New Year's Day.",
+                    fullDescription: "All city government offices will be closed on January 1 in observance of New Year's Day. Wishing everyone a safe and happy new year.",
+                    date: new Date(today.getFullYear() + 1, 0, 1), // January 1 (next year)
+                    image: "newyear.jpg",
+                    type: "holiday",
+                    category: "holiday"
+                }
+            ];
+            
+            // Store events in localStorage for persistence
+            localStorage.setItem('bacoorEvents', JSON.stringify(events));
+            
+            renderEvents(events);
+            setupEventFiltering(events);
+        }
+        
+        function renderEvents(eventsToRender) {
+            const container = document.getElementById('events-container');
+            container.innerHTML = '';
+            
+            if (eventsToRender.length === 0) {
+                container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--gray);">No events found matching your search criteria.</p>';
+                return;
+            }
+            
+            eventsToRender.forEach(event => {
+                const eventDate = new Date(event.date);
+                const imgSrc = event.image ? `../assests/${event.image}` : '../assests/default-event.jpg';
+                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                
+                const eventEl = document.createElement('div');
+                eventEl.className = 'event-card';
+                // Use the event image as the background of the date block for a stronger visual
+                const dateBgStyle = `background-image: linear-gradient(rgba(10,74,138,0.6), rgba(10,74,138,0.6)), url('${imgSrc}'); background-size: cover; background-position: center;`;
+                eventEl.innerHTML = `
+                    <div class="event-date" style="${dateBgStyle}">
+                        <div class="day">${eventDate.getDate()}</div>
+                        <div class="month">${monthNames[eventDate.getMonth()]}</div>
+                        <div class="year">${eventDate.getFullYear()}</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>${event.title}</h3>
+                        <p>${event.description.substring(0, 120)}...</p>
+                        <div style="margin-top: 15px;">
+                            <span class="event-tag ${event.type}">${event.type === 'event' ? 'Event' : event.type === 'announcement' ? 'Announcement' : 'Holiday'}</span>
+                        </div>
+                    </div>
+                `;
+                
+                eventEl.addEventListener('click', () => {
+                    showEventDetails(event);
+                });
+                
+                container.appendChild(eventEl);
+            });
+        }
+        
+        function showEventDetails(event) {
+            const eventDate = new Date(event.date);
+            
+            document.getElementById('event-modal-title').textContent = event.title;
+            document.getElementById('event-modal-date').textContent = eventDate.toDateString();
+            document.getElementById('event-modal-content').innerHTML = `<p>${event.fullDescription || event.description}</p>`;
+            
+            let detailsHtml = '';
+            if (event.location) {
+                detailsHtml += `<p><strong>Location:</strong> ${event.location}</p>`;
+            }
+            if (event.time) {
+                detailsHtml += `<p><strong>Time:</strong> ${event.time}</p>`;
+            }
+            if (event.registrationRequired !== undefined) {
+                detailsHtml += `<p><strong>Registration:</strong> ${event.registrationRequired ? 'Required' : 'Not Required'}</p>`;
+            }
+            
+            document.getElementById('event-details').innerHTML = detailsHtml;
+            
+            // Show register button only for events that require registration
+            document.getElementById('registerEventBtn').style.display = 
+                event.type === 'event' && event.registrationRequired ? 'inline-block' : 'none';
+            
+            // Show modal
+            document.getElementById('eventModal').style.display = 'flex';
+            
+            // Set up modal close buttons
+            document.getElementById('closeEventModal').addEventListener('click', function() {
+                document.getElementById('eventModal').style.display = 'none';
+            });
+            
+            document.getElementById('closeEventModalBtn').addEventListener('click', function() {
+                document.getElementById('eventModal').style.display = 'none';
+            });
+            
+            document.getElementById('registerEventBtn').addEventListener('click', function() {
+                alert(`Registration for "${event.title}" would open in a real implementation.`);
+                document.getElementById('eventModal').style.display = 'none';
+            });
+        }
+        
+        function searchEvents() {
+            const searchTerm = document.getElementById('eventSearch').value.toLowerCase();
+            const allEvents = JSON.parse(localStorage.getItem('bacoorEvents') || '[]');
+            
+            if (!searchTerm.trim()) {
+                renderEvents(allEvents);
+                return;
+            }
+            
+            const filteredEvents = allEvents.filter(event => 
+                event.title.toLowerCase().includes(searchTerm) || 
+                event.description.toLowerCase().includes(searchTerm)
+            );
+            
+            renderEvents(filteredEvents);
+        }
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        function setActiveNavLink() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
